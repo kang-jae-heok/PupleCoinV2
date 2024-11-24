@@ -1,0 +1,33 @@
+{
+  "originHash" : "35708ef869ad3d07f138f134a51d2b4543210d75368ecdfe38e8051fad3cee5d",
+  "pins" : [
+    {
+      "identity" : "flexlayout",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/layoutBox/FlexLayout.git",
+      "state" : {
+        "revision" : "f3187749d2d31a01aa18f8b107e603e210f9bce9",
+        "version" : "1.3.33"
+      }
+    },
+    {
+      "identity" : "ribs",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/uber/RIBs.git",
+      "state" : {
+        "revision" : "a7e92325978a3a34ef3b36e92090c06abab81462",
+        "version" : "0.16.3"
+      }
+    },
+    {
+      "identity" : "rxswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReactiveX/RxSwift",
+      "state" : {
+        "revision" : "c7c7d2cf50a3211fe2843f76869c698e4e417930",
+        "version" : "6.8.0"
+      }
+    }
+  ],
+  "version" : 3
+}

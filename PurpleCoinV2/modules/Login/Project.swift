@@ -6,7 +6,7 @@ let project = Project(
         .target(
             name: "Login",
             destinations: .iOS,
-            product: .app,
+            product: .framework,
             bundleId: "io.tuist.Login",
             infoPlist: .extendingDefault(
                 with: [

@@ -6,7 +6,7 @@ let project = Project(
         .target(
             name: "Core",
             destinations: .iOS,
-            product: .app,
+            product: .framework,
             bundleId: "io.tuist.Core",
             infoPlist: .extendingDefault(
                 with: [
@@ -18,7 +18,10 @@ let project = Project(
             ),
             sources: ["Core/Sources/**"],
             resources: ["Core/Resources/**"],
-            dependencies: []
+            dependencies: [
+                .external(name: "RIBs"),
+                .external(name: "FlexLayout")
+            ]
         ),
         .target(
             name: "CoreTests",
