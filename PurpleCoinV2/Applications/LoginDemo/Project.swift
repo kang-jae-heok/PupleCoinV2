@@ -19,8 +19,8 @@ let project = Project(
             sources: ["LoginDemo/Sources/**"],
             resources: ["LoginDemo/Resources/**"],
             dependencies: [
-                .project(target: "Core", path: "Modules/Core"),
-                .project(target: "Login", path: "Modules/Login")
+                .project(target: "Core", path: "../../Modules/Core"),
+                .project(target: "Login", path: "../../Modules/Login")
             ]
         ),
         .target(

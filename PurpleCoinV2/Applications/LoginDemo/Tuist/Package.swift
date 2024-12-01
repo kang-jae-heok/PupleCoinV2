@@ -15,8 +15,7 @@ import PackageDescription
 let package = Package(
     name: "LoginDemo",
     dependencies: [
-        // Add your own dependencies here:
-        // .package(url: "https://github.com/Alamofire/Alamofire", from: "5.0.0"),
-        // You can read more about dependencies here: https://docs.tuist.io/documentation/tuist/dependencies
+        .package(url: "https://github.com/uber/RIBs.git", from: "0.9.0"),
+        .package(url: "https://github.com/layoutBox/FlexLayout.git",.upToNextMajor(from: "1.3.0"))
     ]
 )

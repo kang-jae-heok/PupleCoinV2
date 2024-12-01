@@ -1,12 +1,11 @@
 //
-//  AppDelegate.swift
-//  Core
+//  SceneDelegate.swift
+//  LoginDemo
 //
-//  Created by 강재혁 on 11/27/24.
+//  Created by 강재혁 on 12/1/24.
 //
 
 import UIKit
-import Login
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 

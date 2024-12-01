@@ -19,7 +19,8 @@ let project = Project(
             sources: ["PurpleCoinV2/Sources/**"],
             resources: ["PurpleCoinV2/Resources/**"],
             dependencies: [
-                .project(target: "Core", path: "Modules/Core")
+                .project(target: "Core", path: "Modules/Core"),
+                .project(target: "Login", path: "Modules/Login")
             ]
         ),
         .target(

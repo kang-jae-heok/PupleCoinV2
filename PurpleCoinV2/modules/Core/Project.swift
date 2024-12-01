@@ -18,10 +18,7 @@ let project = Project(
             ),
             sources: ["Core/Sources/**"],
             resources: ["Core/Resources/**"],
-            dependencies: [
-                .external(name: "RIBs"),
-                .external(name: "FlexLayout")
-            ]
+            dependencies: []
         ),
         .target(
             name: "CoreTests",
