@@ -1,34 +1,34 @@
 //
-//  LoggedOffInteractor.swift
+//  LoggedOutInteractor.swift
 //  Login
 //
-//  Created by 강재혁 on 12/1/24.
+//  Created by 강재혁 on 12/2/24.
 //
 
 import RIBs
 import RxSwift
 
-protocol LoggedOffRouting: ViewableRouting {
+protocol LoggedOutRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
 }
 
-protocol LoggedOffPresentable: Presentable {
-    var listener: LoggedOffPresentableListener? { get set }
+protocol LoggedOutPresentable: Presentable {
+    var listener: LoggedOutPresentableListener? { get set }
     // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-protocol LoggedOffListener: AnyObject {
+protocol LoggedOutListener: AnyObject {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
 }
 
-final class LoggedOffInteractor: PresentableInteractor<LoggedOffPresentable>, LoggedOffInteractable, LoggedOffPresentableListener {
+final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, LoggedOutInteractable, LoggedOutPresentableListener {
 
-    weak var router: LoggedOffRouting?
-    weak var listener: LoggedOffListener?
+    weak var router: LoggedOutRouting?
+    weak var listener: LoggedOutListener?
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    override init(presenter: LoggedOffPresentable) {
+    override init(presenter: LoggedOutPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
     }

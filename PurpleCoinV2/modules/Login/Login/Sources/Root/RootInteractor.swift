@@ -1,34 +1,37 @@
 //
-//  LoggedOnInteractor.swift
+//  RootInteractor.swift
 //  Login
 //
-//  Created by 강재혁 on 12/1/24.
+//  Created by 강재혁 on 12/2/24.
 //
+
 
 import RIBs
 import RxSwift
 
-protocol LoggedOnRouting: ViewableRouting {
+protocol RootRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    func routeToLoggedIn(withPlayer1Name player1Name: String, player2Name: String)
 }
 
-protocol LoggedOnPresentable: Presentable {
-    var listener: LoggedOnPresentableListener? { get set }
+protocol RootPresentable: Presentable {
+    var listener: RootPresentableListener? { get set }
     // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-protocol LoggedOnListener: AnyObject {
+protocol RootListener: AnyObject {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
 }
 
-final class LoggedOnInteractor: PresentableInteractor<LoggedOnPresentable>, LoggedOnInteractable, LoggedOnPresentableListener {
+final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteractable, RootPresentableListener {
 
-    weak var router: LoggedOnRouting?
-    weak var listener: LoggedOnListener?
+    weak var router: RootRouting?
+
+    weak var listener: RootListener?
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    override init(presenter: LoggedOnPresentable) {
+    override init(presenter: RootPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
     }
@@ -41,5 +44,11 @@ final class LoggedOnInteractor: PresentableInteractor<LoggedOnPresentable>, Logg
     override func willResignActive() {
         super.willResignActive()
         // TODO: Pause any business logic.
+    }
+
+    // MARK: - LoggedOutListener
+
+    func didLogin(withPlayer1Name player1Name: String, player2Name: String) {
+        router?.routeToLoggedIn(withPlayer1Name: player1Name, player2Name: player2Name)
     }
 }
